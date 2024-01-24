@@ -6,7 +6,6 @@ if (month <= 0 || month > 12 || isNaN(month)) alert('다시 입력해주세요.'
 date = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 days = date[month]
 
-
 document.write('<table>'); //표 생성
 document.write(`<caption>${month}월</caption>`);
 document.write('<tr><th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr>')

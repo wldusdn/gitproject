@@ -1,4 +1,10 @@
- /* slider__wrap */
+header{
+  margin: auto;
+  display:flex;
+  justify-content: center;
+  text-align: center;
+}
+
 .slider__wrap {
   position: absolute;
   left: 50%;
@@ -63,7 +69,4 @@
 }
 .slider__btn a:hover {
   background-color: rgba(0, 0, 0, 0.5);
-}
-header{
-  text-align: center;
 }

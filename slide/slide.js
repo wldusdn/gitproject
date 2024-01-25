@@ -1,8 +1,8 @@
 let images = [
-    "img/spring.jpg",
-    "img/summer.jpg",
-    "img/autumn.jpg",
-    "img/winter.jpg",
+    "../img/spring.jpg",
+    "../img/summer.jpg",
+    "../img/autumn.jpg",
+    "../img/winter.jpg",
 ];
 
 function imageSlider(parent, images){
@@ -51,33 +51,33 @@ function imageSlider(parent, images){
     });
 
 
-    //왼쪽 버튼 클릭하기
-    slider.prevBtn.addEventListener("click", function(){
-        imageNodes[currentIndex].classList.remove("active");
-        currentIndex--;
+    // //왼쪽 버튼 클릭하기
+    // slider.prevBtn.addEventListener("click", function(){
+    //     imageNodes[currentIndex].classList.remove("active");
+    //     currentIndex--;
 
-        //0 4 3 2 1 0 4 3.....
-        if(currentIndex < 0) currentIndex = images.length - 1;
-        imageNodes[currentIndex].classList.add("active")
+    //     //0 4 3 2 1 0 4 3.....
+    //     if(currentIndex < 0) currentIndex = images.length - 1;
+    //     imageNodes[currentIndex].classList.add("active")
 
-        //썸네일
-        slider.thumnails.querySelector("img.active").classList.remove("active");
-        thumnailNodes[currentIndex].classList.add("active");
-    });
+    //     //썸네일
+    //     slider.thumnails.querySelector("img.active").classList.remove("active");
+    //     thumnailNodes[currentIndex].classList.add("active");
+    // });
 
-    //오른쪽 버튼 클릭하기
-    slider.nextBtn.addEventListener("click", function(){
-        imageNodes[currentIndex].classList.remove("active");
-        currentIndex++;
+    // //오른쪽 버튼 클릭하기
+    // slider.nextBtn.addEventListener("click", function(){
+    //     imageNodes[currentIndex].classList.remove("active");
+    //     currentIndex++;
 
-        //1 2 3 4 0 1 2 3 4...
-        currentIndex = (currentIndex) % images.length;
-        imageNodes[currentIndex].classList.add("active")
+    //     //1 2 3 4 0 1 2 3 4...
+    //     currentIndex = (currentIndex) % images.length;
+    //     imageNodes[currentIndex].classList.add("active")
 
-        //썸네일
-        slider.thumnails.querySelector("img.active").classList.remove("active");
-        thumnailNodes[currentIndex].classList.add("active");
-    });
+    //     //썸네일
+    //     slider.thumnails.querySelector("img.active").classList.remove("active");
+    //     thumnailNodes[currentIndex].classList.add("active");
+    // });
 }
 
 imageSlider(document.querySelector(".slider__wrap"), images);
